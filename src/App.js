@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { Homepage } from "./features/homepage";
+import { useDispatch } from "react-redux";
+import { fetchRepos } from "./features/homepage/core/repositoriesSlice";
 
 function App() {
+  const dispatch = useDispatch();
+  const username = "AdamGralak";
+
+  useEffect(() => {
+      dispatch(fetchRepos(username));
+  }, [dispatch, username]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Homepage />
   );
 }
 
