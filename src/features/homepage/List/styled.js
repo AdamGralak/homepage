@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const StyledList = styled.ul`
 column-count: 2;
 column-gap: 20px;
+padding-bottom: 20px;
+margin-top: 0px;
+margin-bottom: 0px;
 color: ${({ theme }) => theme.colors.textContent};
 background-color: ${({ theme }) => theme.colors.objectBackground};
 transition: background-color 0.3s ease, color 0.3s ease;

@@ -12,10 +12,10 @@ export const StyledSection = styled.section`
 export const StyledSectionHeader = styled.header`
   position: relative;
   padding: 14px;
-  padding-bottom: 0px;
+  padding-bottom: 6px;
+  background-color: ${({ theme }) => theme.colors.objectBackground};
   color: ${({ theme }) => theme.colors.text};
   font-size: 24px;
   font-weight: 600;
   font-style: italic;
-  border-bottom: 2px solid ${({ theme }) => theme.colors.lightGrey};
 `;
