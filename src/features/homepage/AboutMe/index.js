@@ -1,7 +1,8 @@
 import React from "react";
-import myImage from "./fish-1755473_1280-588x420.jpg"
-import { StyledAboutMe, StyledDiv } from "./styled";
+import myImage from "./photo.jpg"
+import { ButtonLink, Envelope, StyledAboutMe, StyledDiv } from "./styled";
 import { ThemeChangeButton } from "../ThemeChange";
+import { email } from "../Data";
 
 export const AboutMe = () => {
 
@@ -14,13 +15,14 @@ export const AboutMe = () => {
                         Adam Gralak
                     </h2>
                     <p>
-                        lorem ipsum
+                    👨🏻‍💻 I'm a Junior Frontend Developer into React, 
+                    currently looking for new job opportunities
                     </p>
-                    <button>
-                        Hire
-                    </button>
-                    <ThemeChangeButton/>
+                    <ButtonLink href={`mailto:${email}`}>
+                       <Envelope/>  Hire Me!
+                    </ButtonLink>
                 </StyledDiv>
+                <ThemeChangeButton />
             </StyledAboutMe>
         </>
     )

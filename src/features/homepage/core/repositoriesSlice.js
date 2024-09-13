@@ -5,29 +5,37 @@ const personalHomepage = createSlice({
     initialState: {
         status: "initial",
         repositories: null,
+        darkMode: false,
     },
     reducers: {
-        fetchRepos: () => ({
-            status: "loading",
-            repositories: null,
-        }),
-        fetchReposError: () => ({
-            status: "error",
-            repositories: null,
-        }),
-        fetchReposSucces: (state, { payload }) => {
+        switchDarkMode: (state) => {
+            state.darkMode = !state.darkMode;
+        },
+        fetchRepos: (state) => {
+            state.status = "loading";
+            state.repositories = null;
+        },
+        fetchReposError: (state) => {
+            state.status = "error";
+            state.repositories = null;
+        },        
+        fetchReposSuccess: (state, { payload }) => {
             state.status = "success";
             state.repositories = payload;
         },
     }
 });
+
 export const {
+    switchDarkMode,
     fetchRepos,
     fetchReposError,
-    fetchReposSucces
+    fetchReposSuccess,
 } = personalHomepage.actions;
 
-export const selectReposState = state => state.repositories;
+export const selectReposState = state => state.personalHomepage;
 export const selectRepos = state => selectReposState(state).repositories;
+export const selectStatus = state => selectReposState(state).status;
+export const selectDarkMode = state => selectReposState(state).darkMode;
 
 export default personalHomepage.reducer;

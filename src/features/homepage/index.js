@@ -2,20 +2,23 @@ import React from "react";
 import { Container } from "../../common/Container";
 import { Section } from "../../common/Section";
 import { List } from "./List";
-import skills from "./skills";
-import nextToLearn from "./nextToLearn";
+import { skills } from "./Data/index";
+import { nextToLearn } from "./Data/index";
 import { AboutMe } from "./AboutMe";
 import { Repositories } from "./Repositories";
+import { Footer } from "./Footer";
 
 export const Homepage = () => {
-    return(
-    <>
-        <Container>
-            <AboutMe />
-            <Section title={"My skills:"} body={<List list={skills} />} />
-            <Section title={"What I want to learn next?"} body={<List list={nextToLearn} />} />
-            <Section body={<Repositories />} />
-        </Container>
-    </>
-)};
+    return (
+        <>
+            <Container>
+                <AboutMe />
+                <Section title={"My skills:"} body={<List list={skills} />} />
+                <Section title={"What I plan to learn next"} body={<List list={nextToLearn} />} />
+                <Repositories />
+                <Footer />
+            </Container>
+        </>
+    )
+};
 

@@ -1,20 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { MoonIcon, StyledButton, SunIcon, Wrapper } from "./styled";
+import { useDispatch, useSelector } from "react-redux";
+import { selectDarkMode, switchDarkMode } from "../core/repositoriesSlice";
 
 export const ThemeChangeButton = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
+    const dispatch = useDispatch();
+    const isDarkMode = useSelector(selectDarkMode);
     const handleThemeToggle = () => {
-        setIsDarkMode((isDarkMode) => !isDarkMode);
+        dispatch(switchDarkMode());
     };
 
     return (
         <>
             <Wrapper>
                 <StyledButton onClick={handleThemeToggle} isdarkmode={isDarkMode ? "true" : "false"}>
-                <p>Switch dark mode</p>   
-                <MoonIcon isdarkmode={isDarkMode ? "true" : "false"}>🌙</MoonIcon>
-                <SunIcon isdarkmode={isDarkMode ? "true" : "false"}>☀️</SunIcon>
+                    <p>Dark mode: {isDarkMode ? "on" : "off"}</p>
+                    <MoonIcon isdarkmode={isDarkMode ? "true" : "false"}>🌙</MoonIcon>
+                    <SunIcon isdarkmode={isDarkMode ? "true" : "false"}>☀️</SunIcon>
                 </StyledButton>
             </Wrapper>
         </>
