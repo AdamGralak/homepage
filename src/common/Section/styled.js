@@ -14,6 +14,7 @@ export const StyledSectionHeader = styled.header`
   padding: 14px;
   padding-bottom: 6px;
   background-color: ${({ theme }) => theme.colors.objectBackground};
+  transition: background-color 0.3s ease, color 0.3s ease;
   color: ${({ theme }) => theme.colors.text};
   font-size: 24px;
   font-weight: 600;
