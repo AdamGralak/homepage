@@ -4,10 +4,14 @@ export const username = "AdamGralak";
 
 export const email = "gralak.adam2@wp.pl";
 
-export const nextToLearn = [
+export const learnNow = [
     { id: nanoid(), content: "Node.js" },
     { id: nanoid(), content: "Express.js"},
-    { id: nanoid(), content: "JS classes"},
+    { id: nanoid(), content: "MongoDB"},
+    { id: nanoid(), content: "TypeScript"},
+];
+
+export const nextToLearn = [
     { id: nanoid(), content: "Unit testing" },
     { id: nanoid(), content: "React Native"},
 ];
@@ -35,5 +39,4 @@ export const skills = [
     { id: nanoid(), content: "JavaScript ES6+" },
     { id: nanoid(), content: "Git" },
     { id: nanoid(), content: "CSS Flexbox" },
-    { id: nanoid(), content: "TypeScript" },
 ];
