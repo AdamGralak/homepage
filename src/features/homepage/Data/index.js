@@ -2,7 +2,7 @@ import { nanoid } from "@reduxjs/toolkit";
 
 export const username = "AdamGralak";
 
-export const email = "gralak.adam2@wp.pl";
+export const email = "g.adam02@wp.pl";
 
 export const learnNow = [
     { id: nanoid(), content: "Node.js" },
@@ -17,6 +17,8 @@ export const nextToLearn = [
 ];
 
 export const skills = [
+    { id: nanoid(), content: "React" },
+    { id: nanoid(), content: "JavaScript ES6+" },
     { id: nanoid(), content: "Semantic & accessible HTML" },
     { id: nanoid(), content: "React Router" },
     { id: nanoid(), content: "Promises, Async/Await" },
@@ -34,9 +36,7 @@ export const skills = [
     { id: nanoid(), content: "NPM" },
     { id: nanoid(), content: "CSS BEM convention" },
     { id: nanoid(), content: "Working with API (fetch, axios)" },
-    { id: nanoid(), content: "React" },
     { id: nanoid(), content: "CSS Grid" },
-    { id: nanoid(), content: "JavaScript ES6+" },
     { id: nanoid(), content: "Git" },
     { id: nanoid(), content: "CSS Flexbox" },
 ];
