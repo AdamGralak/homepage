@@ -48,7 +48,7 @@ export const Repositories = () => {
             <Header>
                 <GithubSymbol />
                 <h2>Portfolio</h2>
-                <p>My recent projects</p>
+                <p>My recent Frontend projects</p>
             </Header>
             {renderContent()}
         </section>
